@@ -6,9 +6,7 @@ import {Trebuchet} from "../src/Trebuchet.sol";
 
 contract DeployTrebuchet is Script {
     function run() public {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-
-        vm.startBroadcast(deployerPrivateKey);
+        vm.startBroadcast();
 
         new Trebuchet(200, msg.sender);
 

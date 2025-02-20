@@ -6,9 +6,7 @@ import {Spell} from "../src/Spell.sol";
 
 contract DeploySpell is Script {
     function run() public {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-
-        vm.startBroadcast(deployerPrivateKey);
+        vm.startBroadcast();
 
         new Spell(200);
 
